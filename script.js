@@ -1,22 +1,22 @@
 // script.js
-function updateGreeting() {
+function updateGreetingAndBackground() {
     const hour = new Date().getHours();
+    const body = document.body;
     const greetingDiv = document.getElementById('greeting');
 
     if (hour < 12) {
         greetingDiv.innerText = 'Good Morning!';
-        // Add more styling or effects if needed
+        body.className = 'morning';
     } else if (hour < 18) {
         greetingDiv.innerText = 'Good Afternoon!';
-        // Add more styling or effects if needed
+        body.className = 'afternoon';
     } else {
         greetingDiv.innerText = 'Good Evening!';
-        // Add more styling or effects if needed
+        body.className = 'evening';
     }
 }
 
 // Initial call
-updateGreeting();
+updateGreetingAndBackground();
 
-// Update the greeting every hour
-setInterval(updateGreeting, 3600000);
+// Update the greeting and background
