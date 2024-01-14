@@ -3,8 +3,41 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 100px;
+    transition: background 0.5s ease;
 }
 
 #greeting {
     font-size: 2em;
+    color: white;
+}
+
+/* Animation keyframes for different parts of the day */
+@keyframes morningAnimation {
+    0% { background: #ffecd2; }
+    50% { background: #fcb69f; }
+    100% { background: #ffecd2; }
+}
+
+@keyframes afternoonAnimation {
+    0% { background: #a1c4fd; }
+    50% { background: #c2e9fb; }
+    100% { background: #a1c4fd; }
+}
+
+@keyframes eveningAnimation {
+    0% { background: #2b5876; }
+    50% { background: #4e4376; }
+    100% { background: #2b5876; }
+}
+
+.morning {
+    animation: morningAnimation 5s infinite;
+}
+
+.afternoon {
+    animation: afternoonAnimation 5s infinite;
+}
+
+.evening {
+    animation: eveningAnimation 5s infinite;
 }
